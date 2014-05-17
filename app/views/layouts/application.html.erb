@@ -11,7 +11,7 @@
 <% if session[:id] %>
 
   <p>You are logged in as: <%= User.find(session[:id]).username %></p>
-
+<%= link_to 'Sign Out', controller: 'sessions', action: 'destroy' %>
 <% end %>
 
 <%= yield %>
